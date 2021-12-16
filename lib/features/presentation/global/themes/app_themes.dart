@@ -8,6 +8,7 @@ abstract class AppThemes {
   static const backgroundColor = Color(0x19EF4164);
   static const disabledColor = Color(0x84292D32);
   static const scaffoldBackgroundColor = Colors.white;
+  static const shadowColor = Color(0x3f000000);
 
   static ThemeData _baseTheme({
     Brightness brightness = Brightness.light,
@@ -21,6 +22,7 @@ abstract class AppThemes {
         splashColor: Colors.black12,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         fontFamily: AppFonts.montserrat,
+        shadowColor: shadowColor,
       );
 
   /// light theme

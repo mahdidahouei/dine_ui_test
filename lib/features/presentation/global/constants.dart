@@ -1,0 +1,1 @@
+const kDineBottomNavigationBarHeight = 84.0;
