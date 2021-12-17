@@ -32,22 +32,26 @@ class DineBottomNavigationBar extends StatelessWidget {
       ),
       child: Material(
         color: Colors.transparent,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              for (var i = 0; i < items.length; i++)
-                _DineBottomNavigationTile(
-                  item: items[i],
-                  onTap: () {
-                    onTap?.call(i);
-                  },
-                  isSelected: i == currentIndex,
-                ),
-            ],
-          ),
-        ),
+        child: LayoutBuilder(builder: (context, viewPortConstraints) {
+          return Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: viewPortConstraints.maxWidth / (items.length * 3),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                for (var i = 0; i < items.length; i++)
+                  _DineBottomNavigationTile(
+                    item: items[i],
+                    onTap: () {
+                      onTap?.call(i);
+                    },
+                    isSelected: i == currentIndex,
+                  ),
+              ],
+            ),
+          );
+        }),
       ),
     );
   }

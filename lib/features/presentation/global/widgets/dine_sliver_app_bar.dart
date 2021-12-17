@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -125,7 +126,13 @@ class _HeaderDelegateChildState extends State<_HeaderDelegateChild> {
               child: Stack(
                 children: [
                   PageView(
-                    children: widget.backgroundImages,
+                    children: [
+                      for (var image in widget.backgroundImages)
+                        FittedBox(
+                          fit: BoxFit.cover,
+                          child: image,
+                        ),
+                    ],
                     controller: _imageSliderController,
                   ),
                   Positioned(
@@ -185,7 +192,7 @@ class _HeaderDelegateChildState extends State<_HeaderDelegateChild> {
             ),
           ),
         PositionedDirectional(
-          top: mediaQueryData.padding.top + 16,
+          top: mediaQueryData.padding.top + (kIsWeb ? 28.0 : 16.0),
           start: 16.0,
           child: const DineBackButton(),
         ),

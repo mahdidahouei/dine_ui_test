@@ -1,3 +1,5 @@
+import 'package:dine_test/web_app.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'features/presentation/global/localizations/app_localizations.dart';
@@ -19,6 +21,19 @@ class DineApp extends StatelessWidget {
       supportedLocales: AppSupportedLocales.all,
       localizationsDelegates: AppLocalizations.delegates,
       localeResolutionCallback: AppLocalizations.localeResolutionCallback,
+      builder: (context, app) {
+        return Navigator(
+          onGenerateRoute: (settings) => MaterialPageRoute(
+            builder: (context) =>
+                (kIsWeb
+                    ? DineWebApp(
+                        app: app,
+                      )
+                    : app) ??
+                const SizedBox.shrink(),
+          ),
+        );
+      },
       initialRoute: MainPage.routeName,
       routes: {
         MainPage.routeName: (context) => const MainPage(),

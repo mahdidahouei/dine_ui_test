@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:dine_test/features/presentation/global/constants.dart';
 
 class DineTabBar extends StatelessWidget implements PreferredSizeWidget {
-
   static const _kDineTabBarHeight = kDineToolbarHeight - 24;
 
   const DineTabBar({
@@ -16,30 +15,28 @@ class DineTabBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
-    return LayoutBuilder(builder: (context, viewPortConstraints) {
-      return SizedBox(
-        height: _kDineTabBarHeight,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Transform(
-              transform: Matrix4.translationValues(0.0, 12.0, 1.0),
-              child: TabBar(
-                indicator: _CircleTabIndicator(
-                  lineWidth: viewPortConstraints.maxWidth / (tabs.length * 3.5),
-                  color: themeData.primaryColor,
-                ),
-                labelStyle: themeData.textTheme.subtitle1,
-                labelColor: themeData.selectedRowColor,
-                unselectedLabelColor: themeData.unselectedWidgetColor,
-                unselectedLabelStyle: themeData.textTheme.subtitle2,
-                tabs: tabs,
+    return SizedBox(
+      height: _kDineTabBarHeight,
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Transform(
+            transform: Matrix4.translationValues(0.0, 12.0, 1.0),
+            child: TabBar(
+              indicator: _CircleTabIndicator(
+                lineWidth: 28.0,
+                color: themeData.primaryColor,
               ),
+              labelStyle: themeData.textTheme.subtitle1,
+              labelColor: themeData.selectedRowColor,
+              unselectedLabelColor: themeData.unselectedWidgetColor,
+              unselectedLabelStyle: themeData.textTheme.subtitle2,
+              tabs: tabs,
             ),
           ),
         ),
-      );
-    });
+      ),
+    );
   }
 
   @override
