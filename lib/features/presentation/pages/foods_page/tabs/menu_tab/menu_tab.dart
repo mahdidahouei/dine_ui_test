@@ -105,7 +105,7 @@ class MenuTab extends StatelessWidget {
             },
             separatorBuilder: (context, index) {
               return Divider(
-                indent: 80,
+                indent: 100,
                 height: 0.3,
                 thickness: 0.3,
                 color: themeData.disabledColor,
