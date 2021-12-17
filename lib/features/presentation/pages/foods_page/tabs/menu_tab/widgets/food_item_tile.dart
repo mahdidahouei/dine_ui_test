@@ -9,7 +9,7 @@ class FoodItemTile extends StatelessWidget {
     required this.name,
     this.ingredients,
     required this.price,
-    this.discountedPrice,
+    this.discountedPrice, this.onTap,
   }) : super(key: key);
 
   final Widget image;
@@ -17,13 +17,13 @@ class FoodItemTile extends StatelessWidget {
   final String? ingredients;
   final String price;
   final String? discountedPrice;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
     return InkWell(
-      onTap: () {
-      },
+      onTap: onTap,
       highlightColor: Colors.transparent,
       child: Padding(
         padding: const EdgeInsets.all(16.0),

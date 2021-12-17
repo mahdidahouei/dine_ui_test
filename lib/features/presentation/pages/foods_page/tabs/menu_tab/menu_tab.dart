@@ -100,10 +100,11 @@ class MenuTab extends StatelessWidget {
                 ingredients: localizations.translate("food_subtitle"),
                 price: "29.90 €",
                 discountedPrice: "15.90 €",
+                onTap: () {},
               );
             },
             separatorBuilder: (context, index) {
-              return  Divider(
+              return Divider(
                 indent: 80,
                 height: 0.3,
                 thickness: 0.3,

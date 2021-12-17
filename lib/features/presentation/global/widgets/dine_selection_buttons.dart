@@ -191,9 +191,8 @@ class _DineSelectionButtonState extends State<_DineToggleButton>
                   .withOpacity(0.12),
           child: Ink(
             height: 60.0,
-            width: 70.0,
             padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
+              horizontal: 17.0,
             ),
             decoration: BoxDecoration(
               borderRadius: borderRadius,

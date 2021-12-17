@@ -32,24 +32,38 @@ class _FoodPageState extends State<FoodPage> {
                   AppImage.food,
                   Container(
                     color: Colors.yellow,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.black26,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.green,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.blue,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.yellow,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.teal,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                   Container(
                     color: Colors.green,
+                    height: 10.0,
+                    width: 10.0,
                   ),
                 ],
                 bottom: DineTabBar(

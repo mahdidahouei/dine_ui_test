@@ -128,9 +128,11 @@ class _HeaderDelegateChildState extends State<_HeaderDelegateChild> {
                   PageView(
                     children: [
                       for (var image in widget.backgroundImages)
-                        FittedBox(
-                          fit: BoxFit.cover,
-                          child: image,
+                        ClipRect(
+                          child: FittedBox(
+                            fit: BoxFit.cover,
+                            child: image,
+                          ),
                         ),
                     ],
                     controller: _imageSliderController,
