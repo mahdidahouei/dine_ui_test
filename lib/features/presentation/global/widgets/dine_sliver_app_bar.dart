@@ -1,12 +1,11 @@
 import 'dart:math';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'package:dine_test/features/presentation/global/constants.dart';
-import 'package:dine_test/features/presentation/global/widgets/dine_back_button.dart';
+import '../constants.dart';
+import 'dine_back_button.dart';
 
 class DineSliverAppBar extends StatelessWidget {
   const DineSliverAppBar(

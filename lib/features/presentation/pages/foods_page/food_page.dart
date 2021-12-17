@@ -1,3 +1,6 @@
+import 'package:dine_test/features/presentation/pages/foods_page/tabs/menu_tab/menu_tab.dart';
+import 'package:dine_test/features/presentation/pages/foods_page/tabs/overview_tab/overview_tab.dart';
+import 'package:dine_test/features/presentation/pages/foods_page/tabs/reviews_tab/reviews_tab.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/assets/app_image.dart';
@@ -65,7 +68,13 @@ class _FoodPageState extends State<FoodPage> {
               ),
             ];
           },
-          body: Container(),
+          body: const TabBarView(
+            children: [
+              OverviewTab(),
+              MenuTab(),
+              ReviewsTab(),
+            ],
+          ),
         ),
       ),
       floatingActionButton: DineFloatingActionButton(
