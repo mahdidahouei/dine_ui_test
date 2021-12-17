@@ -1,8 +1,8 @@
-import 'package:dine_test/features/presentation/pages/foods_page/foods_page.dart';
 import 'package:flutter/material.dart';
 
 import 'features/presentation/global/localizations/app_localizations.dart';
 import 'features/presentation/global/themes/app_themes.dart';
+import 'features/presentation/pages/main_page/main_page.dart';
 
 void main() {
   runApp(const DineApp());
@@ -19,9 +19,9 @@ class DineApp extends StatelessWidget {
       supportedLocales: AppSupportedLocales.all,
       localizationsDelegates: AppLocalizations.delegates,
       localeResolutionCallback: AppLocalizations.localeResolutionCallback,
-      initialRoute: FoodsPage.routeName,
+      initialRoute: MainPage.routeName,
       routes: {
-        FoodsPage.routeName: (context) => const FoodsPage(),
+        MainPage.routeName: (context) => const MainPage(),
       },
     );
   }

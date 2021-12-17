@@ -1,5 +1,6 @@
-import 'package:dine_test/features/presentation/global/themes/app_themes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:dine_test/features/presentation/global/themes/app_themes.dart';
 
 abstract class AppSvg {
   static late final arrowLeft = SvgPicture.asset("assets/svg/arrow_left.svg");

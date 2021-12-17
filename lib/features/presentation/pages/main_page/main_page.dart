@@ -1,25 +1,37 @@
-import 'package:dine_test/core/assets/app_svg.dart';
-import 'package:dine_test/features/presentation/global/localizations/app_localizations.dart';
+import 'package:dine_test/features/presentation/pages/book_saved_page/book_saved_page.dart';
+import 'package:dine_test/features/presentation/pages/foods_page/food_page.dart';
+import 'package:dine_test/features/presentation/pages/profile_page/profile_page.dart';
 
-import '../../global/widgets/dine_bottom_navigation_bar.dart';
+import '../../global/widgets/dine_floating_action_button.dart';
 import 'package:flutter/material.dart';
 
-class FoodsPage extends StatefulWidget {
+import '../../../../core/assets/app_svg.dart';
+import '../../global/localizations/app_localizations.dart';
+import '../../global/widgets/dine_bottom_navigation_bar.dart';
+
+class MainPage extends StatefulWidget {
   static const routeName = "/foods";
 
-  const FoodsPage({Key? key}) : super(key: key);
+  const MainPage({Key? key}) : super(key: key);
 
   @override
-  State<FoodsPage> createState() => _FoodsPageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _FoodsPageState extends State<FoodsPage> {
+class _MainPageState extends State<MainPage> {
   int _currentIndex = 1;
+
+  late List<Widget> pages = const [
+    BookSavedPage(),
+    FoodPage(),
+    ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
     return Scaffold(
+      body: pages[_currentIndex],
       bottomNavigationBar: DineBottomNavigationBar(
         items: [
           DineBottomNavigationBarItem(

@@ -32,6 +32,11 @@ class AppFonts {
       fontWeight: DineFontWeight.regular,
       color: textsColor,
     ).withZoomFix,
+    bodyText2: const TextStyle(
+      fontSize: 17,
+      fontWeight: DineFontWeight.regular,
+      color: textsColor,
+    ).withZoomFix,
     button: const TextStyle(
       fontSize: 16,
       fontWeight: DineFontWeight.semiBold,

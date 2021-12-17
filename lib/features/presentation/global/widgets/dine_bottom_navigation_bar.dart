@@ -1,6 +1,6 @@
-import 'package:dine_test/features/presentation/global/animations/animated_donak_opacity.dart';
 import 'package:flutter/material.dart';
 
+import 'package:dine_test/features/presentation/global/animations/animated_donak_opacity.dart';
 import '../constants.dart';
 
 class DineBottomNavigationBar extends StatelessWidget {
@@ -18,7 +18,7 @@ class DineBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
-    return Ink(
+    return Container(
       height: kDineBottomNavigationBarHeight,
       decoration: BoxDecoration(
         color: themeData.scaffoldBackgroundColor,
@@ -30,19 +30,24 @@ class DineBottomNavigationBar extends StatelessWidget {
           ),
         ],
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 36.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          for (var i = 0; i < items.length; i++)
-            _DineBottomNavigationTile(
-              item: items[i],
-              onTap: () {
-                onTap?.call(i);
-              },
-              isSelected: i == currentIndex,
-            ),
-        ],
+      child: Material(
+        color: Colors.transparent,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 36.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              for (var i = 0; i < items.length; i++)
+                _DineBottomNavigationTile(
+                  item: items[i],
+                  onTap: () {
+                    onTap?.call(i);
+                  },
+                  isSelected: i == currentIndex,
+                ),
+            ],
+          ),
+        ),
       ),
     );
   }
