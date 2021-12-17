@@ -16,9 +16,12 @@ abstract class AppThemes {
       ThemeData(
         brightness: brightness,
         textTheme: AppFonts.textTheme,
+        accentColor: accentColor,
         primaryColor: primaryColor,
         backgroundColor: backgroundColor,
         disabledColor: disabledColor,
+        unselectedWidgetColor: disabledColor,
+        selectedRowColor: Colors.black,
         splashColor: Colors.black12,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         fontFamily: AppFonts.montserrat,

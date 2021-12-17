@@ -1,13 +1,12 @@
+import 'package:flutter/material.dart';
+
 import 'package:dine_test/features/presentation/pages/book_saved_page/book_saved_page.dart';
 import 'package:dine_test/features/presentation/pages/foods_page/food_page.dart';
 import 'package:dine_test/features/presentation/pages/profile_page/profile_page.dart';
-
-import '../../global/widgets/dine_floating_action_button.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../core/assets/app_svg.dart';
 import '../../global/localizations/app_localizations.dart';
 import '../../global/widgets/dine_bottom_navigation_bar.dart';
+import '../../global/widgets/dine_floating_action_button.dart';
 
 class MainPage extends StatefulWidget {
   static const routeName = "/foods";

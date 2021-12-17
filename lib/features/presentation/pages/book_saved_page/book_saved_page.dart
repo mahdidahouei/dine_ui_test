@@ -1,5 +1,6 @@
-import '../../global/localizations/app_localizations.dart';
 import 'package:flutter/material.dart';
+
+import '../../global/localizations/app_localizations.dart';
 
 class BookSavedPage extends StatelessWidget {
   const BookSavedPage({Key? key}) : super(key: key);

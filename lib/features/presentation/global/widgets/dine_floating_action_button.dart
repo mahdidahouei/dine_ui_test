@@ -1,5 +1,8 @@
-import 'package:dine_test/features/presentation/global/constants.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+import 'package:dine_test/features/presentation/global/constants.dart';
 
 class DineFloatingActionButton extends StatelessWidget {
   const DineFloatingActionButton({
@@ -24,7 +27,7 @@ class DineFloatingActionButton extends StatelessWidget {
         onTap: onPressed,
         highlightColor: Colors.transparent,
         child: Ink(
-          width: (mediaQueryData.size.width - 32) / 2,
+          width: min((mediaQueryData.size.width - 32) / 2, 200),
           height: kDineButtonHeight,
           child: Center(
             child: Text(
